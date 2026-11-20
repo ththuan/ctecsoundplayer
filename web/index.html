@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="vi" data-theme="dragons">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CTEC Sound Player · Bàn điều khiển âm thanh sự kiện</title>
+    <meta
+      name="description"
+      content="CTEC Sound Player: soundboard, cue, mixer và nhạc nền cho sự kiện. Chạy trực tiếp trên trình duyệt, có bản Windows."
+    />
+    <meta name="theme-color" content="#f0782c" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CTEC Sound" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="64x64" href="./assets/icon-64.png" />
+    <link rel="apple-touch-icon" href="./assets/icon-180.png" />
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="CTEC Sound Player">
+        <img src="./assets/logo.png" alt="Logo CTEC" />
+        <div>
+          <b>CTEC SOUND</b>
+          <small>BÀN ĐIỀU KHIỂN ÂM THANH SỰ KIỆN</small>
+        </div>
+      </a>
+      <div class="top-actions">
+        <span class="status" id="connection">● ONLINE</span>
+        <button id="theme" type="button" title="Đổi giao diện sáng / tối">◐ Giao diện</button>
+        <button id="fullscreen" type="button" title="Toàn màn hình">⛶</button>
+        <button id="help" type="button" title="Hướng dẫn nhanh">? Trợ giúp</button>
+        <button id="sources" type="button" title="Nguồn và giấy phép nhạc">♪ Nguồn nhạc</button>
+        <button id="logs" type="button" title="Nhật ký phát">▤ Nhật ký</button>
+      </div>
+    </header>
+
+    <nav class="workspace-tabs" aria-label="Khu vực làm việc">
+      <button id="consoleTab" type="button" class="active" aria-selected="true">
+        Bàn điều khiển
+      </button>
+      <button id="backgroundTab" type="button" aria-selected="false">
+        Nhạc nền YouTube <span>46 bộ</span>
+      </button>
+      <span class="default-fade"
+        >FADE MẶC ĐỊNH 2 GIÂY · 1–9 CHỌN THẺ · SPACE GO · M GIẢM NHẠC · ESC DỪNG</span
+      >
+    </nav>
+
+    <main id="consoleView">
+      <section class="workspace">
+        <div>
+          <div class="eyebrow">CTEC · CAO ĐẲNG KINH TẾ - KỸ THUẬT CẦN THƠ</div>
+          <h1>Bàn điều khiển âm thanh sự kiện</h1>
+        </div>
+        <div class="workspace-actions">
+          <button id="newShow" type="button" title="Tạo kịch bản mới">+ Kịch bản</button>
+          <button id="showMode" type="button" title="Khóa chỉnh sửa khi đang diễn">
+            ♧ Chế độ diễn
+          </button>
+          <button id="outputDevice" type="button" title="Chọn loa / cổng xuất âm thanh">
+            🔊 Đầu ra
+          </button>
+          <button id="backup" type="button" title="Sao lưu cấu hình và nhạc đã tải">
+            ⤓ Sao lưu
+          </button>
+          <button id="restore" type="button" title="Khôi phục từ file sao lưu">
+            ⤒ Khôi phục
+          </button>
+          <button id="offline" type="button" title="Lưu nhạc vào bộ nhớ trình duyệt">
+            ☁ Tải offline
+          </button>
+          <span class="hint" id="offlineProgress"></span>
+          <button id="upload" type="button" class="primary" title="Thêm file nhạc từ máy">
+            + Thêm nhạc
+          </button>
+        </div>
+      </section>
+
+      <div class="console">
+        <section class="panel rundown">
+          <div class="panel-title">
+            <h2>Kịch bản</h2>
+            <span class="badge">CUE</span>
+          </div>
+          <select id="showSelect" aria-label="Chọn kịch bản"></select>
+          <div class="cue-tools">
+            <button id="prevCue" type="button" title="Cue trước">← Trước</button>
+            <button id="nextCue" type="button" title="Cue sau">Sau →</button>
+            <button id="resetCues" type="button" title="Về cue đầu">Về đầu</button>
+            <button id="addCue" type="button" title="Thêm cue">+ Cue</button>
+          </div>
+          <div class="cue-list" id="cues"></div>
+          <div class="cue-note">
+            <span class="eyebrow">GHI CHÚ MC</span>
+            <p id="cueNote"></p>
+          </div>
+          <div class="go-row">
+            <button id="go" type="button" class="go">GO <kbd>SPACE</kbd></button>
+          </div>
+          <div class="timer">
+            <div>
+              <span class="eyebrow">ĐỒNG HỒ SÂN KHẤU</span>
+              <strong id="timerDisplay">05:00</strong>
+            </div>
+            <div class="timer-buttons">
+              <input
+                id="timerMinutes"
+                type="number"
+                min="1"
+                max="240"
+                value="5"
+                aria-label="Số phút"
+              />
+              <button id="timerStart" type="button" aria-label="Bắt đầu hoặc tạm dừng">▶</button>
+              <button id="timerReset" type="button" aria-label="Đặt lại">↺</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel soundboard">
+          <div class="board-tools">
+            <label class="search">
+              <span>⌕</span>
+              <input
+                id="search"
+                type="search"
+                placeholder="Tìm bài, nghệ sĩ, ghi chú…"
+                autocomplete="off"
+              />
+            </label>
+            <select id="sort" aria-label="Sắp xếp thư viện">
+              <option value="default">Thứ tự thư viện</option>
+              <option value="name">Tên A → Z</option>
+            </select>
+            <select id="libraryOrigin" aria-label="Nguồn nhạc">
+              <option value="all">Mọi nguồn</option>
+              <option value="new">Mới ở 1.2</option>
+              <option value="kevin">Kevin MacLeod</option>
+              <option value="scott">Scott Buckley</option>
+              <option value="drive">Thư viện sự kiện</option>
+              <option value="fx">Hiệu ứng</option>
+            </select>
+            <button id="favoriteFilter" type="button" aria-label="Chỉ hiện bài yêu thích">☆</button>
+          </div>
+          <div class="tabs" id="categories" role="tablist" aria-label="Danh mục nhạc"></div>
+          <div class="pads" id="pads"></div>
+          <div class="dropzone" id="dropzone">
+            <span>＋</span>Kéo thả file nhạc vào đây hoặc bấm để chọn
+            <small>MP3, WAV, M4A, AAC, OGG, FLAC · tối đa 150 MB mỗi file</small>
+          </div>
+          <input id="fileInput" type="file" accept="audio/*" multiple hidden />
+          <div class="board-footer">
+            <span id="trackCount">0 TRACKS</span>
+            <span id="storageInfo"></span>
+            <span class="live-led" id="audioLed" title="Đang phát"></span>
+          </div>
+        </section>
+
+        <section class="panel mixer">
+          <div class="panel-title">
+            <h2>Mixer</h2>
+            <span class="badge">MASTER</span>
+          </div>
+          <div class="master-meter">
+            <canvas id="meter" width="256" height="39"></canvas>
+            <span id="peak">−∞ dBFS</span>
+          </div>
+          <div class="faders">
+            <label>
+              Master <output id="masterValue">80%</output>
+              <input id="master" type="range" min="0" max="100" value="80" />
+            </label>
+            <label>
+              Nhạc nền <output id="musicValue">65%</output>
+              <input id="music" type="range" min="0" max="100" value="65" />
+            </label>
+            <label>
+              Hiệu ứng <output id="fxValue">85%</output>
+              <input id="fx" type="range" min="0" max="100" value="85" />
+            </label>
+            <label>
+              Mức giảm khi MC <output id="duckValue">25%</output>
+              <input id="duckAmount" type="range" min="0" max="100" value="25" />
+            </label>
+          </div>
+          <div class="mix-options">
+            <label class="check">
+              <input id="duck" type="checkbox" checked />
+              Tự giảm nhạc nền khi có hiệu ứng / MC
+            </label>
+            <label>
+              Crossfade nhạc nền
+              <select id="crossfade">
+                <option value="0">Tắt</option>
+                <option value="0.5">0,5 giây</option>
+                <option value="1">1 giây</option>
+                <option value="2" selected>2 giây</option>
+                <option value="3">3 giây</option>
+                <option value="4">4 giây</option>
+                <option value="6">6 giây</option>
+              </select>
+            </label>
+            <button id="talk" type="button" class="talk">🎙 Giảm nhạc cho MC <kbd>M</kbd></button>
+          </div>
+          <div class="safety">
+            <button id="fadeAll" type="button">↘ Fade tất cả 2 giây</button>
+            <button id="panic" type="button" class="danger">■ Dừng tất cả <kbd>ESC</kbd></button>
+          </div>
+          <div class="routing">
+            <span id="wakeStatus">Chống ngủ: chưa bật</span>
+            <span>Chọn loa USB / HDMI trong cài đặt âm thanh của máy nếu cần.</span>
+          </div>
+        </section>
+
+        <section class="panel player">
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">NOW PLAYING</span>
+              <h2 id="nowTitle">Sẵn sàng lên sóng</h2>
+            </div>
+            <span class="badge" id="nowStatus">STANDBY</span>
+          </div>
+          <div class="player-body">
+            <canvas id="waveform" width="1200" height="62"></canvas>
+            <div class="seek-row">
+              <span id="elapsed">00:00</span>
+              <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Tua bài" />
+              <span id="duration">00:00</span>
+            </div>
+            <div class="player-controls">
+              <button id="pause" type="button">Ⅱ Tạm dừng</button>
+              <button id="stopMusic" type="button">■ Dừng nhạc</button>
+              <button id="nextTrack" type="button">⏭ Bài kế</button>
+              <button id="loop" type="button">↻ Lặp</button>
+              <label>
+                Tốc độ
+                <select id="rate">
+                  <option value="0.5">0,5×</option>
+                  <option value="0.75">0,75×</option>
+                  <option value="1" selected>1×</option>
+                  <option value="1.25">1,25×</option>
+                  <option value="1.5">1,5×</option>
+                  <option value="2">2×</option>
+                </select>
+              </label>
+              <span id="nowSource"></span>
+            </div>
+            <div class="active-fx" id="activeFx"></div>
+          </div>
+        </section>
+
+        <section class="panel queue-panel">
+          <div class="panel-title">
+            <h2>Hàng đợi</h2>
+            <span class="badge">QUEUE</span>
+          </div>
+          <div class="queue-list" id="queue"></div>
+          <div class="mix-options" style="padding-top: 0; border-top: 0">
+            <label class="check">
+              <input id="repeatPlaylist" type="checkbox" />
+              Lặp lại bài vừa phát
+            </label>
+            <label class="check">
+              <input id="autoPlaylist" type="checkbox" checked />
+              Tự phát bài kế khi hết bài
+            </label>
+          </div>
+          <button id="playQueue" type="button" class="queue-play">▶ Phát hàng đợi</button>
+          <div class="cue-tools" style="padding-top: 0">
+            <button id="clearQueue" type="button">Xóa hàng đợi</button>
+            <button id="shuffle" type="button">Trộn thứ tự</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section id="backgroundView" class="background-view" hidden>
+      <div class="bg-heading">
+        <div>
+          <div class="eyebrow">NHẠC NỀN · YOUTUBE</div>
+          <h2>Chọn không khí cho từng khoảnh khắc</h2>
+          <p>
+            46 bộ nhạc tuyển chọn cho đón khách, khai mạc, trao giải, lucky draw và tiệc.
+            Trình phát dùng YouTube, tự chuyển bài và đồng bộ âm lượng với mixer.
+          </p>
+        </div>
+        <button id="bgAdd" type="button" class="primary">+ Thêm link YouTube</button>
+      </div>
+
+      <div class="bg-presets">
+        <span>GỢI Ý NHANH</span>
+        <button type="button" data-bgpreset="bg-5">Đón khách · Jazz</button>
+        <button type="button" data-bgpreset="bg-1">Nhạc chờ · Piano</button>
+        <button type="button" data-bgpreset="bg-21">Tiệc tối · Smooth jazz</button>
+        <button type="button" data-bgpreset="phg-2">PHG · Lucky draw</button>
+        <button type="button" data-bgpreset="phg-1">PHG · Trao giải</button>
+        <button type="button" data-bgpreset="phg-5">PHG · Đón khách</button>
+      </div>
+
+      <div class="bg-filters">
+        <input id="bgSearch" type="search" placeholder="Tìm bộ nhạc, thể loại, video…" autocomplete="off" />
+        <select id="bgUse" aria-label="Tình huống"></select>
+        <select id="bgLanguage" aria-label="Ngôn ngữ"></select>
+        <select id="bgGenre" aria-label="Thể loại"></select>
+        <select id="bgOrigin" aria-label="Nguồn bộ nhạc">
+          <option value="all">Mọi nguồn</option>
+          <option value="phg">Phát Hoàng Gia</option>
+          <option value="custom">Tự thêm</option>
+          <option value="builtin">Tuyển chọn</option>
+        </select>
+        <button id="bgFavorites" type="button">☆ Yêu thích</button>
+        <button id="bgRecent" type="button">Gần đây</button>
+      </div>
+
+      <section class="panel youtube-deck" id="youtubeDeck" hidden>
+        <div class="yt-frame"><div id="youtubePlayer"></div></div>
+        <div class="yt-deck-info">
+          <span class="eyebrow">TRÌNH PHÁT NHẠC NỀN</span>
+          <h2 id="bgNow">Chưa chọn bộ nhạc</h2>
+          <p id="bgVideoTitle"></p>
+          <div class="bg-options">
+            <span id="bgState">STANDBY</span>
+            <label class="check"><input id="bgLoop" type="checkbox" checked /> Lặp</label>
+            <label class="check"><input id="bgShuffle" type="checkbox" /> Trộn</label>
+            <label>
+              Hẹn tắt
+              <select id="bgSleep">
+                <option value="0">Không hẹn</option>
+                <option value="15">15 phút</option>
+                <option value="30">30 phút</option>
+                <option value="45">45 phút</option>
+                <option value="60">60 phút</option>
+                <option value="90">90 phút</option>
+                <option value="120">120 phút</option>
+              </select>
+            </label>
+            <span id="bgSleepRemaining"></span>
+          </div>
+          <label class="bg-volume">
+            Âm lượng nhạc nền <output id="bgVolumeValue">100%</output>
+            <input id="bgVolume" type="range" min="0" max="100" value="100" />
+          </label>
+          <div class="seek-row">
+            <span id="bgElapsed">00:00</span>
+            <input id="bgSeek" type="range" min="0" max="1000" value="0" aria-label="Tua nhạc nền" />
+            <span id="bgDuration">00:00</span>
+          </div>
+          <div class="yt-controls">
+            <button id="bgPrevious" type="button" title="Video trước">⏮</button>
+            <button id="bgPause" type="button">Ⅱ Tạm dừng</button>
+            <button id="bgStop" type="button">■ Dừng</button>
+            <button id="bgNext" type="button" title="Video kế">⏭</button>
+            <button id="bgTalk" type="button" class="talk">🎙 MC</button>
+            <button id="bgPanic" type="button" class="danger">■ Tất cả</button>
+            <a id="bgSource" href="#" target="_blank" rel="noopener">Mở YouTube ↗</a>
+          </div>
+          <details>
+            <summary>Danh sách video trong bộ</summary>
+            <div id="bgDetails"></div>
+          </details>
+        </div>
+      </section>
+
+      <div class="bg-layout">
+        <div>
+          <p class="hint" id="bgCount"></p>
+          <div class="bg-grid" id="bgGrid"></div>
+        </div>
+        <aside class="panel bg-queue">
+          <div class="panel-title">
+            <h2>Hàng đợi nhạc nền</h2>
+            <span class="badge" id="bgTotal">0 bộ</span>
+          </div>
+          <div id="bgQueue"></div>
+          <button id="bgPlayQueue" type="button">▶ Phát bộ kế</button>
+          <button id="bgClearQueue" type="button">Xóa hàng đợi</button>
+          <div class="hint" id="bgMessage"></div>
+          <div class="bg-notice">
+            <p>
+              Nhạc nền cần Internet. Khi phát nhạc từ bàn điều khiển, nhạc nền tự fade
+              out 2 giây. Bật chống ngủ và chế độ diễn trước khi vào sự kiện.
+            </p>
+            <button id="bgUseOffline" type="button">Mở bàn điều khiển</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <dialog id="editor">
+      <div class="dialog-head">
+        <h2>Chỉnh bài nhạc</h2>
+        <button type="button" data-close aria-label="Đóng">×</button>
+      </div>
+      <form id="editForm">
+        <input type="hidden" name="id" />
+        <div class="form-grid">
+          <label>Tiêu đề<input name="title" required maxlength="120" /></label>
+          <label>Danh mục<select name="category"></select></label>
+          <label>
+            Kênh phát
+            <select name="bus">
+              <option value="music">Nhạc nền</option>
+              <option value="fx">Hiệu ứng</option>
+            </select>
+          </label>
+          <label>Màu<input name="color" type="color" value="#ed6b26" /></label>
+          <label>Bắt đầu (giây)<input name="start" type="number" min="0" max="86400" step="0.01" value="0" /></label>
+          <label>Kết thúc (giây)<input name="end" type="number" min="0" max="86400" step="0.01" value="0" /></label>
+          <label>Fade vào (giây)<input name="fadeIn" type="number" min="0" max="30" step="0.1" value="2" /></label>
+          <label>Fade ra (giây)<input name="fadeOut" type="number" min="0" max="30" step="0.1" value="2" /></label>
+          <label>Âm lượng (%)<input name="volume" type="number" min="0" max="100" step="1" value="100" /></label>
+          <label>Phím tắt<input name="shortcut" maxlength="1" placeholder="1 ký tự" /></label>
+        </div>
+        <label>Ghi chú<textarea name="note" rows="3" maxlength="500"></textarea></label>
+        <label class="check"><input name="loop" type="checkbox" /> Lặp lại bài này</label>
+        <p class="hint" id="editorCredit"></p>
+        <div class="dialog-actions">
+          <button id="deleteTrack" type="button" class="danger" hidden>Xóa bài</button>
+          <button id="exportWav" type="button">Xuất WAV</button>
+          <button type="button" data-close>Hủy</button>
+          <button type="submit" class="primary">Lưu</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="cueEditor">
+      <div class="dialog-head">
+        <h2>Chỉnh cue</h2>
+        <button type="button" data-close aria-label="Đóng">×</button>
+      </div>
+      <form id="cueForm">
+        <input type="hidden" name="index" />
+        <div class="form-grid">
+          <label>Tên cue<input name="title" required maxlength="120" /></label>
+          <label>Bài nhạc<select name="track"></select></label>
+        </div>
+        <label>Ghi chú MC<textarea name="note" rows="3" maxlength="500"></textarea></label>
+        <label class="check">
+          <input name="follow" type="checkbox" /> Tự chuyển cue kế khi hết bài
+        </label>
+        <div class="dialog-actions">
+          <button id="deleteCue" type="button" class="danger" hidden>Xóa cue</button>
+          <button type="button" data-close>Hủy</button>
+          <button type="submit" class="primary">Lưu cue</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="info">
+      <div class="dialog-head">
+        <h2 id="infoTitle"></h2>
+        <button type="button" data-close aria-label="Đóng">×</button>
+      </div>
+      <div class="info-body" id="infoBody"></div>
+      <div class="dialog-actions">
+        <button type="button" data-close class="primary">Đóng</button>
+      </div>
+    </dialog>
+
+    <dialog id="bgAddDialog">
+      <div class="dialog-head">
+        <h2>Thêm bộ nhạc YouTube</h2>
+        <button type="button" data-close aria-label="Đóng">×</button>
+      </div>
+      <form id="bgAddForm">
+        <label>
+          Link YouTube hoặc playlist
+          <input name="url" type="url" required placeholder="https://www.youtube.com/watch?v=…" />
+        </label>
+        <label>Tên bộ nhạc<input name="title" required maxlength="120" /></label>
+        <div class="form-grid">
+          <label>Tình huống<select name="use"></select></label>
+          <label>Ngôn ngữ<select name="language"></select></label>
+        </div>
+        <p class="hint">
+          Hỗ trợ video lẻ, playlist và YouTube Music. Danh sách được lưu trên trình duyệt này.
+        </p>
+        <div class="dialog-actions">
+          <button type="button" data-close>Hủy</button>
+          <button type="submit" class="primary">Lưu bộ nhạc</button>
+        </div>
+      </form>
+    </dialog>
+
+    <input id="restoreInput" type="file" accept="application/json,.json" hidden />
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+      <p style="padding: 24px">CTEC Sound Player cần JavaScript để phát nhạc và điều khiển sự kiện.</p>
+    </noscript>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

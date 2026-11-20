@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>CTECSoundPlayer</AssemblyName>
+    <RootNamespace>GSoundPlayer</RootNamespace>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ApplicationIcon>assets\ctec.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Remove="GSoundPlayer\App.xaml" />
+    <ApplicationDefinition Include="GSoundPlayer\App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="GSoundPlayer\MainWindow.xaml" />
+    <Page Remove="themes\dark.xaml" />
+    <Page Remove="themes\light.xaml" />
+    <Page Remove="themes\styles.xaml" />
+    <Page Include="GSoundPlayer\MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="mainwindow.xaml" />
+    <Page Include="themes\dark.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="themes/dark.xaml" />
+    <Page Include="themes\light.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="themes/light.xaml" />
+    <Page Include="themes\styles.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="themes/styles.xaml" />
+    <Resource Remove="assets\app.ico" />
+    <Resource Remove="assets\logo_thanh_tieu_de.png" />
+    <Resource Remove="assets\ctec.ico" />
+    <Resource Remove="assets\ctec_logo.png" />
+    <Resource Include="assets\app.ico" LogicalName="assets/app.ico" />
+    <Resource Include="assets\logo_thanh_tieu_de.png" LogicalName="assets/logo_thanh_tieu_de.png" />
+    <Resource Include="assets\ctec.ico" LogicalName="assets/ctec.ico" />
+    <Resource Include="assets\ctec_logo.png" LogicalName="assets/ctec_logo.png" />
+    <EmbeddedResource Include="..\..\payload\du_lieu.zip" LogicalName="du_lieu.zip" Condition="Exists('..\..\payload\du_lieu.zip')" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSoundPlayer.Core\GSoundPlayer.Core.csproj" />
+    <None Include="native\gsaudio.dll">
+      <Link>gsaudio.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

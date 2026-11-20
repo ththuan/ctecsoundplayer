@@ -1,0 +1,50 @@
+{
+  "id": "./",
+  "name": "CTEC Sound Player",
+  "short_name": "CTEC Sound",
+  "description": "Bàn điều khiển âm thanh sự kiện: soundboard, cue, mixer, nhạc nền YouTube và thư viện nhạc.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "orientation": "any",
+  "background_color": "#101213",
+  "theme_color": "#f0782c",
+  "categories": ["music", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Bàn điều khiển",
+      "short_name": "Điều khiển",
+      "url": "./?view=console",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nhạc nền YouTube",
+      "short_name": "Nhạc nền",
+      "url": "./?view=background",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

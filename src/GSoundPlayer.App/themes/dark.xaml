@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="Bg" Color="#0b0e0d" />
+  <SolidColorBrush x:Key="Panel" Color="#121715" />
+  <SolidColorBrush x:Key="Panel2" Color="#18201c" />
+  <SolidColorBrush x:Key="Line" Color="#24302b" />
+  <SolidColorBrush x:Key="Line2" Color="#33433c" />
+  <SolidColorBrush x:Key="BtnLine" Color="#587266" />
+  <SolidColorBrush x:Key="Ink" Color="#e8efeb" />
+  <FontWeight x:Key="BodyWeight">Normal</FontWeight>
+  <SolidColorBrush x:Key="Ink2" Color="#b4c3bc" />
+  <SolidColorBrush x:Key="Muted" Color="#7f9189" />
+  <SolidColorBrush x:Key="Green" Color="#12a150" />
+  <SolidColorBrush x:Key="Green2" Color="#35d07f" />
+  <SolidColorBrush x:Key="GreenTint" Color="#2912a150" />
+  <SolidColorBrush x:Key="GreenRow" Color="#9912a150" />
+  <SolidColorBrush x:Key="Amber" Color="#f2b43a" />
+  <SolidColorBrush x:Key="AmberTint" Color="#26f2b43a" />
+  <SolidColorBrush x:Key="Red" Color="#e5484d" />
+  <SolidColorBrush x:Key="RedTint" Color="#2ee5484d" />
+  <SolidColorBrush x:Key="Blue" Color="#4ea1ff" />
+  <SolidColorBrush x:Key="BlueTint" Color="#294ea1ff" />
+  <SolidColorBrush x:Key="Violet" Color="#9b7bff" />
+  <SolidColorBrush x:Key="Bar" Color="#070a09" />
+  <LinearGradientBrush x:Key="NowBg" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#0f1513" Offset="0" />
+    <GradientStop Color="#0c100e" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="NextBg" Color="#0f1412" />
+  <SolidColorBrush x:Key="InputBg" Color="#0d1210" />
+  <SolidColorBrush x:Key="HoverBg" Color="#161d1a" />
+  <SolidColorBrush x:Key="Hover" Color="#86a295" />
+  <SolidColorBrush x:Key="FadeBg" Color="#1e2a24" />
+  <SolidColorBrush x:Key="MeterBg" Color="#1b2420" />
+  <SolidColorBrush x:Key="MeterPeak" Color="#ffffff" />
+  <SolidColorBrush x:Key="SelBorder" Color="#dfe8e3" />
+  <SolidColorBrush x:Key="SelBg" Color="#0dffffff" />
+  <SolidColorBrush x:Key="StarOff" Color="#56695f" />
+  <SolidColorBrush x:Key="FxKeyBg" Color="#0b0f0d" />
+  <SolidColorBrush x:Key="FxKeyInk" Color="#ffffff" />
+  <SolidColorBrush x:Key="MenuBg" Color="#1a2320" />
+  <SolidColorBrush x:Key="MenuHover" Color="#26322d" />
+  <SolidColorBrush x:Key="HelpBg" Color="#141b18" />
+  <SolidColorBrush x:Key="ToastBg" Color="#1f2a25" />
+  <SolidColorBrush x:Key="ToastOkBg" Color="#0f3a22" />
+  <SolidColorBrush x:Key="ToastOkInk" Color="#d9f7e6" />
+  <SolidColorBrush x:Key="ToastWarnBg" Color="#3a2c0c" />
+  <SolidColorBrush x:Key="ToastWarnInk" Color="#ffe3a6" />
+  <SolidColorBrush x:Key="TabOnBg" Color="#e8efeb" />
+  <SolidColorBrush x:Key="BtnSmall" Color="#b7c6bf" />
+  <SolidColorBrush x:Key="AmberText" Color="#f2b43a" />
+  <SolidColorBrush x:Key="BlueText" Color="#9cc3ff" />
+  <SolidColorBrush x:Key="VioletText" Color="#d3c6ff" />
+  <SolidColorBrush x:Key="RedText" Color="#ffd6d7" />
+  <SolidColorBrush x:Key="GreenText" Color="#35d07f" />
+  <SolidColorBrush x:Key="Scroll" Color="#2a3631" />
+  <SolidColorBrush x:Key="DimBg" Color="#99000000" />
+  <LinearGradientBrush x:Key="GoBg" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#17b85d" Offset="0" />
+    <GradientStop Color="#0d8a43" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="WaveBg" Color="#0d1210" />
+  <SolidColorBrush x:Key="WaveOut" Color="#25302b" />
+  <SolidColorBrush x:Key="WavePlayed" Color="#35d07f" />
+  <SolidColorBrush x:Key="WaveDim" Color="#8a7440" />
+  <SolidColorBrush x:Key="WaveRest" Color="#5d786c" />
+  <SolidColorBrush x:Key="WaveFade" Color="#f2f2b43a" />
+  <SolidColorBrush x:Key="WaveHandle" Color="#35d07f" />
+  <SolidColorBrush x:Key="WaveHandleInk" Color="#062312" />
+  <SolidColorBrush x:Key="WaveHead" Color="#ffffff" />
+</ResourceDictionary>

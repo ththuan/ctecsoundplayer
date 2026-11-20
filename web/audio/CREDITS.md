@@ -1,0 +1,86 @@
+# Nguồn và giấy phép nhạc
+
+Thư viện web CTEC Sound Player gồm các bản nhạc sau. Vui lòng giữ ghi nguồn khi sử dụng lại.
+
+- **Carefree · Đón khách** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/licenses/
+- **Giới thiệu đại biểu** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1SBQkfGzcdICNBv8q_JKaiHXx7zNCQVTP/view?usp=drivesdk
+- **Đại biểu lên sân khấu** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1qodAG1xXl_7DzFmjQlUCEigVgXLbj0fu/view?usp=drivesdk
+- **Vỗ tay khán giả** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/crowd-applause-01
+- **Trống hồi hộp** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/drum-roll
+- **Còi hơi sân đấu** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/mechanical-horn-04
+- **Lucky Draw 1** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1WUIB-n6o8MLV0Y_kOsTvnkLCx___Rraw/view?usp=drivesdk
+- **Trao giải 1** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1e727WSLBqokJ9ZG50Bh4XpjyhxJh7rGK/view?usp=drivesdk
+- **Whoosh chuyển cảnh** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/transition-whoosh-03
+- **Lounge · Tiệc & giải lao** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/licenses/
+- **Trao giải 5** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1A9iH6L1VVuTXuYnXp_IXmRNowDOyhIR7/view?usp=drivesdk
+- **Trao giải 2** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1njG8t2YmWNqAN90oGIxTxgDv1Vcolejt/view?usp=drivesdk
+- **Trao giải 6** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1UY7O0xWeMuNLgzcZiuVbJ_e32VAvAybF/view?usp=drivesdk
+- **Trao giải 4** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1Aiu4B8XSnl7DJYoV1cOtfTWLUpO--JZo/view?usp=drivesdk
+- **Trao giải 3** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1B1cAcjQhml9djy-FikZKXwmF7xEm5Qdu/view?usp=drivesdk
+- **Cảm ơn 2** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1p9Kw_YxzGkpSXnMb0litxwNok0QJiVBw/view?usp=drivesdk
+- **Lucky Draw 3** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1I7dQ0tMU_f35JkiYpiKsJQjHP5EP7BIo/view?usp=drivesdk
+- **Lucky Draw 2** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1u8Q-XfnhKllDDm_3yGhciSpTxhEOtGW5/view?usp=drivesdk
+- **Cảm ơn 3** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1BLISP0LxbBxfRijm4CZIvhmcMXVVFaeG/view?usp=drivesdk
+- **Cảm ơn 1** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1R-qD_Ze3Id8YyVEbUjEuJ236zMi4fKVu/view?usp=drivesdk
+- **Khai tiệc 2** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1JSB__k69x5IcMpGMY05d6wJSIK2etZBz/view?usp=drivesdk
+- **Khai tiệc 1** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1rj7Js6hRA8DCqK8rPzdAJ5fxPya35809/view?usp=drivesdk
+- **Cảm ơn 4** — Thư viện sự kiện của bạn · Nhạc do người dùng cung cấp · chưa xác minh giấy phép · https://drive.google.com/file/d/1Yu9QmtiQgJ6K62c69ahdZAAiIjm3pd-_/view?usp=drivesdk
+- **Khán giả reo hò** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/crowd-cheer-43
+- **Còi trọng tài** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/instrument-whistle-08
+- **Riser mở màn** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/transition-riser-01
+- **Đúng rồi!** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/feedback-success-01
+- **Sai rồi!** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/feedback-error-74
+- **Impact sân khấu** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/transition-impact-hit-36
+- **Báo hết giờ** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/ui-timer-08
+- **Chiến thắng** — SFXMint · CC0 1.0 · https://sfxmint.com/sounds/feedback-success-03
+- **Vui nhộn · Hoạt náo** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/licenses/
+- **Life of Riley · Đón khách vui** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054&Search=Search
+- **Daily Beetle · Acoustic sáng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500025&Search=Search
+- **Bright Wish · Piano nhẹ** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100377&Search=Search
+- **Easy Lemon · Nhạc chờ** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200076&Search=Search
+- **Bossa Antigua · Tiệc cocktail** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700069&Search=Search
+- **Airport Lounge · Check-in** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100806&Search=Search
+- **Lobby Time · Sảnh đón khách** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600054&Search=Search
+- **Apero Hour · Teabreak** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700070&Search=Search
+- **Fanfare for Space · Khai mạc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300026&Search=Search
+- **The Show Must Be Go · Ra mắt** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500068&Search=Search
+- **Motivator · Khởi động** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100803&Search=Search
+- **Funkorama · Minigame** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100474&Search=Search
+- **Beachfront Celebration · Teambuilding** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200022&Search=Search
+- **Wallpaper · Nhạc nền hội nghị** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100843&Search=Search
+- **Rising Tide · Tổng kết** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900010&Search=Search
+- **Dreams Become Real · Tri ân** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500027&Search=Search
+- **Sneaky Snitch · Bốc thăm** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772&Search=Search
+- **Fluffing a Duck · Hoạt náo** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod (incompetech.com) · https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768&Search=Search
+- **Chasing Daylight · Piano tri ân** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley (scottbuckley.com.au) · https://www.scottbuckley.com.au/library/chasing-daylight/
+- **Soar · Vinh danh & tổng kết** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley (scottbuckley.com.au) · https://www.scottbuckley.com.au/library/soar/
+- **Newer Wave · Năng lượng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Voxel Revolution · Năng lượng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Raving Energy · Sôi động** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Cloud Dancer · Nhẹ nhàng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Funky Chunk · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Got Funk · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Celebration · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Street Party · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Magistar · Điện ảnh** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Strength of the Titans · Sting** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Egmont Overture Finale · Trang trọng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Virtutes Instrumenti · Trang trọng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Heroic Reception · Sting** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Jazz Brunch · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Samba Isobel · Tiệc** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Hard Boiled · Lounge** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Tiki Bar Mixer · Nhẹ nhàng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Island Meet and Greet · Đón khách** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Water Droplets on the River · Nhẹ nhàng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Look Busy · Năng lượng** — Kevin MacLeod · CC BY 4.0 · ghi nguồn Kevin MacLeod · https://incompetech.com/music/royalty-free/
+- **Phoenix 2026 · Điện ảnh** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Starfire · Điện ảnh** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Born of the Sky · Điện ảnh** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **In This Moment · Nhẹ nhàng** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Home Was You · Nhẹ nhàng** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **With These Hands · Điện ảnh** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Convergence · Điện ảnh** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Wildflowers · Nhẹ nhàng** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Origami · Nhẹ nhàng** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/
+- **Aphelion · Không gian** — Scott Buckley · CC BY 4.0 · ghi nguồn Scott Buckley · https://www.scottbuckley.com.au/library/

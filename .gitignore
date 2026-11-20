@@ -1,0 +1,39 @@
+# .NET / Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+publish/
+artifacts/
+
+# Build output
+*.exe
+*.pdb
+*.dll
+!src/GSoundPlayer.App/native/gsaudio.dll
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+
+# Local data and logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Generated desktop payload (large local data, not source)
+payload/*.zip
+payload/.stage/
+payload/manifest.json
